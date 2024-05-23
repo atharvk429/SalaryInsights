@@ -8,12 +8,7 @@ const axios = require('axios');
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-const corsOptions = {
-    origin: 'https://main--salaryinsights.netlify.app/',
-    optionsSuccessStatus: 200,
-};
-
-app.use(cors(corsOptions));
+app.use(cors());
 
 const csvFilePath = path.join(__dirname, 'salaries.csv');
 const parseCSV = () => {
