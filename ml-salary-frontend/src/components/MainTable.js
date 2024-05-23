@@ -71,12 +71,15 @@ const MainTable = () => {
         setSelectedYear(record.Year);
     };
 
+    const rowStyle = { cursor: 'pointer' };
+
     return (
         <div style={{ padding: '20px' }}>
             <Table
                 dataSource={data}
                 columns={columns}
                 rowKey="Year"
+                rowClassName={() => 'clickable-row'}
                 onRow={(record) => ({
                     onClick: () => handleRowClick(record),
                 })}
