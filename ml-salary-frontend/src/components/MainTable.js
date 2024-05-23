@@ -12,7 +12,7 @@ const MainTable = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await apiClient.get('http://localhost:5000/api/salaries');
+                const response = await apiClient.get('/api/salaries');
                 const salaries = response.data;
 
                 const validSalaries = salaries.filter(salary => salary.work_year);
