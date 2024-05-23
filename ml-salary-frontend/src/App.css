@@ -1,0 +1,10 @@
+.header {
+  text-decoration: underline;
+  text-align: center;
+  color: skyblue;
+  margin-top: 20px;
+}
+
+.content {
+  padding-top: 50px;
+}
