@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Table } from 'antd';
-import axios from 'axios';
-import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'recharts';
+import apiClient from '../api';
+import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip } from 'recharts';
 import YearDetailTable from './YearDetailTable';
 
 const MainTable = () => {
@@ -12,7 +12,7 @@ const MainTable = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await axios.get('http://localhost:5000/api/salaries');
+                const response = await apiClient.get('http://localhost:5000/api/salaries');
                 const salaries = response.data;
 
                 const validSalaries = salaries.filter(salary => salary.work_year);
