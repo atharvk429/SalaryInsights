@@ -71,6 +71,7 @@ const MainTable = () => {
         setSelectedYear(record.Year);
     };
 
+    // eslint-disable-next-line no-unused-vars
     const rowStyle = { cursor: 'pointer' };
 
     return (
