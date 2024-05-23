@@ -83,6 +83,7 @@ const MainTable = () => {
                 rowClassName={() => 'clickable-row'}
                 onRow={(record) => ({
                     onClick: () => handleRowClick(record),
+                    rowClassName: () => 'clickable-row',
                 })}
             />
             <div style={{ marginBottom: '20px', width: '100%' , display: 'flex', flexDirection: 'column', alignItems: 'center',}}>
